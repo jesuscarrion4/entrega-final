@@ -1,0 +1,32 @@
+* {
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+body { 
+    background: linear-gradient(70deg, turquoise 60%,white 40%);
+}
+
+/* bucles */
+
+@for $i from 1 through 6 {
+    .hi#{$i} {
+        font-size: 1rem * $i;
+    }
+    
+}
+ 
+/* mapas */
+
+$redSocial: (
+    ws: #01DF01,
+    fb: #0000FF,
+    ig: #FF4000, 
+);
+
+@each $nombre, $valor in $redSocial {
+    .icon#{$nombre} {
+        color: $valor;
+    }
+    
+}
